@@ -1,0 +1,51 @@
+﻿<Window x:Class="Wpf.Effects.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf.Effects"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Button Content="Blurred (Radius=2)" Padding="5" Margin="3">
+            <Button.Effect>
+                <BlurEffect Radius="2"></BlurEffect>
+            </Button.Effect>
+        </Button>
+        <Button Content="Blurred (Radius=8)" Padding="5" Margin="3">
+            <Button.Effect>
+                <BlurEffect Radius="8"></BlurEffect>
+            </Button.Effect>
+        </Button>
+        <TextBlock FontSize="20" Margin="5">
+            <TextBlock.Effect>
+                <DropShadowEffect></DropShadowEffect>
+            </TextBlock.Effect>
+            <TextBlock.Text>Basic dropshadow</TextBlock.Text> 
+        </TextBlock>
+        <TextBlock FontSize="20" Margin="5">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="SlateBlue"></DropShadowEffect>
+            </TextBlock.Effect>
+            <TextBlock.Text>Light blue dropshadow</TextBlock.Text>
+        </TextBlock>
+        <TextBlock FontSize="20" Margin="5">
+            <TextBlock.Effect>
+                <DropShadowEffect BlurRadius="15"></DropShadowEffect>
+            </TextBlock.Effect>
+            <TextBlock.Text>Blurred dropshadow with white text</TextBlock.Text>
+        </TextBlock>
+        <TextBlock FontSize="20" Margin="5">
+            <TextBlock.Effect>
+                <DropShadowEffect ShadowDepth="0"></DropShadowEffect>
+            </TextBlock.Effect>
+            <TextBlock.Text>Close dropshadow</TextBlock.Text>
+        </TextBlock>
+        <TextBlock FontSize="20" Margin="5">
+            <TextBlock.Effect>
+                <DropShadowEffect ShadowDepth="25"></DropShadowEffect>
+            </TextBlock.Effect>
+            <TextBlock.Text>Distant dropshadow</TextBlock.Text>
+        </TextBlock>
+    </StackPanel>
+</Window>
